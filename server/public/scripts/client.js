@@ -6,16 +6,17 @@ function readyNow() {
 }
 
 function clickHandlers() {
-    $('.urAnswer').on('click', additionBtn);
-    $('.urAnswer').on('click', subtractBtn);
-    $('.urAnswer').on('click', multiplyBtn);
-    $('.urAnswer').on('click', divideBtn);
+    $('#addtionBtn').on('click', additionBtn);
+    $('#subtractBtn').on('click', subtractBtn);
+    $('#multiplyBtn').on('click', multiplyBtn);
+    $('#divideBtn').on('click', divideBtn);
 }
 
 function additionBtn() {
     let firstValue = $('#input1').val();
     let secondValue = $('#input2').val();
     let objectInfo = {firstNumber: firstValue, secondNumber: secondValue, type: "Add"};
+    console.log('button clicked!');
     $.ajax({
         type: 'POST',
         data: objectInfo,
@@ -28,6 +29,7 @@ function subtractBtn() {
     let firstValue = $('#input1').val();
     let secondValue = $('#input2').val();
     let objectInfo = {firstNumber: firstValue, secondNumber: secondValue, type: "Subtract"};
+    console.log('button clicked!');
     $.ajax({
         type: 'POST',
         data: objectInfo,
@@ -40,6 +42,7 @@ function multiplyBtn() {
     let firstValue = $('#input1').val();
     let secondValue = $('#input2').val();
     let objectInfo = {firstNumber: firstValue, secondNumber: secondValue, type: "Multiply"};
+    console.log('button clicked!');
     $.ajax({
         type: 'POST',
         data: objectInfo,
@@ -52,6 +55,7 @@ function divideBtn() {
     let firstValue = $('#input1').val();
     let secondValue = $('#input2').val();
     let objectInfo = {firstNumber: firstValue, secondNumber: secondValue, type: "Divide"}
+    console.log('button clicked!');
     $.ajax({
         type: 'POST',
         data: objectInfo,
