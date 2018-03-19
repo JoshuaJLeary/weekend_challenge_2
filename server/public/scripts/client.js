@@ -98,9 +98,9 @@ function appendtoDom(calculationArr) {
 }
 function newExperience() {
     console.log('clearBtn Clicked');
-    let clearedField1 = $('#input1').val();
-    let clearedField2 = $('#input2').val();
-    $('clearedField1').empty();
-    $('clearedField2').empty();
-       
+    // let clearedField1 = $('#input1').val();
+    // let clearedField2 = $('#input2').val();
+    // $('clearedField1').empty();
+    // $('clearedField2').empty();
+    $('#calulatorForm')[0].reset();
 }
