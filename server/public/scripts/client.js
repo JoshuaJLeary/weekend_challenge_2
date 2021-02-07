@@ -79,28 +79,19 @@ function getCalcLogic() {
         appendtoDom(response);
         console.log('is this working???');
     })
+    newExperience();
 }
 
 function appendtoDom(calculationArr) {
-    for(i = 0; i < calculationArr.length; i++){
         console.log('hi');
-        // $('#equationHistory').empty(); 
-        // $('#equationHistory').append('<tr><td>' + calculationArr[i] + '</td></tr>');
-        let tr = $('<tr></tr>')
-        tr.append('<td>' + calculationArr[i] + '</td>');
-        $('#equationHistory').append(tr);
 
-        // // div.append(calculationArr[calculation]);
-        // tr.append('<td>' + calculation.firstNumber)
-        // $('#eqationHistory').append(calculationArr);
-    }
+        let newestEntry = calculationArr.length - 1
+        let tr = $('<tr></tr>')
+        tr.append('<td>' + calculationArr[newestEntry] + '</td>');
+        $('#equationHistory').append(tr);
     console.log(calculationArr);
 }
 function newExperience() {
     console.log('clearBtn Clicked');
-    // let clearedField1 = $('#input1').val();
-    // let clearedField2 = $('#input2').val();
-    // $('clearedField1').empty();
-    // $('clearedField2').empty();
     $('#calulatorForm')[0].reset();
 }
